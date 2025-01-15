@@ -8,8 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import lox.Scanner;
-
 public class Lox {
   // By default, we don't have an error
   static boolean hadError = false;
@@ -42,7 +40,7 @@ public class Lox {
     BufferedReader reader = new BufferedReader(input);
 
     System.out.println("Welcome to the lox REPL :)");
-    for (;;) {
+    for (; ; ) {
       System.out.print("> ");
       String line = reader.readLine();
       if (line == null)
